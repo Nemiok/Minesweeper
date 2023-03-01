@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minesweeper</title>
+</head>
+
+<body>
+  <main id="main">
+    <div class="board__container">
+      <div class="board__header">
+        <div class="board-header__mines-left">
+          <div class="mines-left_hundreds" data-value="number_0"></div>
+          <div class="mines-left_dozens" data-value="number_4"></div>
+          <div class="mines-left_units" data-value="number_0"></div>
+        </div>
+        <button aria-label="reload game button" type="button" tabindex="0" class="board-header__smile-btn"
+          data-status="alive"></button>
+        <div class="board-header__timer">
+          <div class="timer_hundreds" data-value="number_0"></div>
+          <div class="timer_dozens" data-value="number_0"></div>
+          <div class="timer_units" data-value="number_0"></div>
+        </div>
+      </div>
+      <div class="board__main"></div>
+    </div>
+
+    <button aria-label="read rules button" type="button" class="rules-button">Rules</button>
+    <aside class="rules" data-is-visible="no">
+      <ul class="rules__list">
+        <li class="rules__item">
+          Поле 16 на 16 клеток
+        </li>
+        <li class="rules__item">
+          Слева счётчик мин от 40 до нуля
+        </li>
+        <li class="rules__item">
+          Мины расставляются случайно
+        </li>
+        <li class="rules__item">
+          Если первый клик оказался по мине, то она уничтожается
+        </li>
+        <li class="rules__item">
+          Если рядом с открытым пустым полем есть другие поля без мин, они открываются автоматически
+        </li>
+        <li class="rules__item">
+          Правая кнопка мыши ставит флажок - так отмечается место, где предполагается мина
+        </li>
+        <li class="rules__item">
+          Если кликнуть правой кнопкой по флажку, ставится вопрос, ещё раз - выделение снимается
+        </li>
+        <li class="rules__item">
+          Клик по смайлику перезапускает игру
+        </li>
+        <li class="rules__item">
+          Испуганный смайлик - пользователь нажал на клавишу, но ещё не отпустил её
+        </li>
+        <li class="rules__item">
+          После проигрыша смайлик заменяется на грустный, пользователю открывается карта мин, таймер останавливается
+        </li>
+        <li class="rules__item">
+          После того, как пользователь открыл все поля кроме мин, смайлик надевает солнечные очки, таймер
+          останавливается
+        </li>
+      </ul>
+    </aside>
+  </main>
+
+</body>
+
+</html>
